@@ -35,8 +35,8 @@ ruleTester.run("no-setup-teardown", rule, {
         // after
         "QUnit.module('Module', { after: function () {} });",
 
-        // both
-        "QUnit.module('Module', { beforeEach: function () {}, afterEach: function () {} });",
+        // all
+        "QUnit.module('Module', { before: function () {}, beforeEach: function () {}, afterEach: function () {}, after: function () {} });",
 
         // other property names are not reported
         "QUnit.module('Module', { foo: function () {} });",
