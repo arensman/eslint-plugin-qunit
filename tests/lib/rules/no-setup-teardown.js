@@ -29,6 +29,12 @@ ruleTester.run("no-setup-teardown", rule, {
         // afterEach
         "QUnit.module('Module', { afterEach: function () {} });",
 
+        // before
+        "QUnit.module('Module', { before: function () {} });",
+
+        // after
+        "QUnit.module('Module', { after: function () {} });",
+
         // both
         "QUnit.module('Module', { beforeEach: function () {}, afterEach: function () {} });",
 
